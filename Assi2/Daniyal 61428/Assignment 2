@@ -1,0 +1,41 @@
+/* Validation of Iso Email Address  */
+%{
+	#include<stdio.h>
+
+%}
+%%
+[a-z0-9]+@[a-z]+\.[a-z]{1,3} 	{printf("Valid \n");}
+
+.+				        {printf("Invalid \n");}
+
+%%
+int main()
+{
+	printf("Enter an email Address: \n");
+	yylex();
+	return 0;
+}
+
+
+/* Validation of phone number */
+
+%{
+  
+%}
+
+%%
+  
+"+"+[0-9][0-9]{11} {printf("\nMobile Number Valid\n");}
+  
+.+ {printf("\nMobile Number NotValid\n");}
+  
+%%
+  
+// driver code
+int main()
+{
+    printf("\nEnter Mobile No : ");
+    yylex();
+    printf("\n");
+    return 0;
+}
