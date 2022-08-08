@@ -8,7 +8,7 @@
   
 [1-9][0-9]{9} {printf("\nMobile Number Valid\n");}
   
-.+ {printf("\nMobile Number Invalid\n");}
+.+ {printf("\n Sorry Invalid Number\n");}
   
 %%
   
