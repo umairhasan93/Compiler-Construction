@@ -1,0 +1,53 @@
+# /* Validation of ISO Email Address  */
+%{
+              ** //* it defines section *// **
+	#include<stdio.h>            ** //* It is a header file / library file and it has necessary information *// **
+
+%}
+           ** //*It defines rule section*// **
+%%
+[a-z0-9]+@[a-z]+\.[a-z]{1,3} 	{printf("Valid \n");}	                                     ** //*The email string must start from alphabets 
+                                                                                                         And it can end with numbers and alphabets 
+                                                                                                         And it must have @ and after it aphabets and 
+                                                                                                          Must have dots . and it will end with    alphabets like  com *// **
+
+.+	{printf("Invalid \n");}                                                   ** //*it will run else part if the string is not correct    
+                                                                                  If the user gives wrong input*// **
+
+%%
+          //*end of rule section*//
+          //* it defines driver code *//
+ 
+int main()                                                                               ** //* it is a main function with integer *// **
+{
+	printf("Enter an Email Address: \n");                                        ** //*it will print the string*// **
+	yylex();                                                                     ** //*it will read the input from user  and match the pattern*// **
+	return 0;                                                                ** //* it will return and terminate the function *// **
+}
+
+# **/* Validation of Phone Number */**
+
+%{
+  **//* it defines section *//**
+	#include<stdio.h>           ** //* It is a header file / library file and it has necessary information *//**
+
+%}
+**//*It defines rule section*//**
+
+%%
+  
+"+"+[0-9][0-9]{11} {printf("\nMobile Number Valid\n");}                                                      **//*The length of the number must be 11 and 
+                                                                                                             It must be between 0 to 9. If it is right it will print the number valid*//**
+  
+.+ {printf("\nMobile Number NotValid\n");}                        **//*it will print invalid if the number is any alphabet character and the length is more than 11*//**
+  
+%%
+  **//*end of rule section*//**
+**//* it defines  driver code *//**
+int main()                                                        **//* it is a main function *//**
+{
+    printf("\nEnter Mobile No : ");                                 **//* it will print the string *//**
+    yylex();                                                          **//* it will read the input from user and match the string/pattern*//**
+    printf("\n");                                                 **//* it will print the user input *//**
+    return 0;                                                        **// *it will terminate the function*//**
+}
