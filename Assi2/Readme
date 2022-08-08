@@ -1,5 +1,5 @@
 # Short Report #
-### Issues ###
+### ISSUE ###
 Issue faced when creating the program for email was to identify the regex for iso standard email.
 
 ### Problem Resolved ###
@@ -14,7 +14,7 @@ If we want to start so we will use % sign compulsory,same for the end process % 
 (for main body)
 we will use double %% for start and  double %% for end because there is scope issue. 
 
-### Issue ###
+### ISSUE ###
 i faced issue that the data grid columns will need custom item renderers ranging .
 
 ### Problem Resolved ###
