@@ -6,3 +6,4 @@ Use this repository for all future assignments and project submission by creatin
 | Muhammad Fasih Rohan  | 62725  | My favorite sport game is cricket. Too much busy daily routine.Life is a loop of Eat Sleep Work.   |
 | Zain Ali Shakeel  | 62777  | My vision is to be the top businessman with most high emoloyment. I want noone to be unemployeed. 
 | Daniyal Shafique | 61428 | I love my parents and i respect my teachers because if you respect your teachers,parents and elders you will get success definitely.i am beginer in freelancing, i am trying to best in my field. and i also do teaching. |
+| Shahmeer khan  | 64160  |  I love to Watch War Horror Movies and work at Tech Heuristic |
