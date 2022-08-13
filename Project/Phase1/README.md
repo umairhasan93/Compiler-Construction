@@ -1,98 +1,34 @@
-Our selected language is mini C#.
- Link to the C# language specification: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/language-specification/introduction
-Some example code for the language:
+The language specifications for Mini C can be found here:  
+1- http://compilersatkiet.22web.org/lang(2).pdf?i=1  
+2- http://www2.cs.arizona.edu/~debray/Teaching/CSc453/DOCS/cminusminusspec.html  
+# Example Code For our Project  
+## Simple if (nesting not allowed)  
+if then  
+Endi
 
+## Switch Statement (nesting not allowed)  
+Switch()  
+Cases  
+Value 1:  
+Break;  
+ Value n:  
+break;  
+Endcase
 
-//FOR LOOP USING SINGLE DIMENSIONAL ARRAY
- using System; 
-class Test { 
-static void Main() { 
-int[] arr = new int[5]; 
-for (int i = 0; i < arr.Length; i++) 
-arr[i] = i * i; 
-for (int i = 0; i < arr.Length; i++) 
-Console.WriteLine("arr[{0}] = {1}", i, arr[i]); 
-} 
-} 
+## Repetition Statement (nesting not allowed)  
+A. Repeat  
+        Until ()  
+B. While (relational expression)  
+Endwhile  
+C. For = start value, end value, inc/dec  
+………  
+Endfor
 
+## I/O Statement  
+a. Input ;  
+b. Output ;
 
-// IF STATEMENT FOR AUTOMATIC MEMORY MANAGEMENT 
- using System;
- public class Stack
- {
- private Node first = null;
- public bool Empty {
- get {
- return (first == null);
- }
- }
- public object Pop() {
- if (first == null)
- throw new Exception("Can't Pop from an empty Stack.");
- else {
- object temp = first.Value;
- first = first.Next;
- return temp;
- }
- } 
-
-//Statement lists and block statements
-static void Main() {
- F();
- G();
- {
- H();
- I();
- }
-} 
-
-//switch statements
-static void Main(string[] args) {
- switch (args.Length) {
- case 0:
- Console.WriteLine("No args");
- break;
- case 1:
- Console.WriteLine("One arg ");
- break;
- default:
- int n = args.Length;
- Console.WriteLine("{0} args", n);
- break;
- }
-} 
-
-
-//break statements
-static void Main(string[] args) {
- int i = 0;
- while (true) {
- if (i == args.Length)
- break;
- Console.WriteLine(args[i++]);
- }
-} 
-
-//Classes
-using System;
- class MyClass
- {
- public MyClass() {
- Console.WriteLine("Instance constructor");
- }
- public MyClass(int value) {
- MyField = value;
- Console.WriteLine("Instance constructor");
- }
- ~MyClass() {
- Console.WriteLine("Destructor");
- }
- public const int MyConst = 12;
- public int MyField = 34;
- public void MyMethod(){
- Console.WriteLine("MyClass.MyMethod");
- }
- public int MyProperty {
- get {
- return MyField;
- } 
+## Program Structure  
+Decleration:  
+Start  
+End
