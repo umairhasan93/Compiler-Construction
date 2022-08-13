@@ -106,3 +106,65 @@ char* subString(char* str, int left, int right)
 }
 
 // Parsing the input STRING.
+void parse(char* str)
+{
+	int left = 0, right = 0;
+	int len = strlen(str);
+
+	while (right <= len && left <= right) {
+		if (isDelimiter(str[right]) == false)
+			right++;
+
+		if (isDelimiter(str[right]) == true && left == right) {
+			if (isOperator(str[right]) == true)
+				printf("'%c' IS AN OPERATOR\n", str[right]);
+
+			right++;
+			left = right;
+		} else if (isDelimiter(str[right]) == true && left != right
+				|| (right == len && left != right)) {
+			char* subStr = subString(str, left, right - 1);
+
+			if (isKeyword(subStr) == true)
+				printf("'%s' IS A KEYWORD\n", subStr);
+
+			else if (isInteger(subStr) == true)
+				printf("'%s' IS AN INTEGER\n", subStr);
+
+			else if (isRealNumber(subStr) == true)
+				printf("'%s' IS A REAL NUMBER\n", subStr);
+
+			else if (validIdentifier(subStr) == true
+					&& isDelimiter(str[right - 1]) == false)
+				printf("'%s' IS A VALID IDENTIFIER\n", subStr);
+
+			else if (validIdentifier(subStr) == false
+					&& isDelimiter(str[right - 1]) == false)
+				printf("'%s' IS NOT A VALID IDENTIFIER\n", subStr);
+			left = right;
+		}
+	}
+	return;
+}
+
+// DRIVER FUNCTION
+int main()
+{
+	// maximum length of string is 100 here
+   char str[100];
+   
+   printf( "Enter Your String : ");
+   gets( str );
+   printf( "Your Tokens Are  \n");
+  
+   //puts( str )  ;
+
+
+	parse(str); // calling the parse function
+
+	return (0);
+}
+
+
+
+
