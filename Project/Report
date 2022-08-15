@@ -1,0 +1,5 @@
+In this project , we choose mini C language to use as an input and get output in tokens and after that use the same language to translate in python language.
+
+Phase1- In this phase we choose out language and write some sample codes of the chosen language.
+
+Phase2- In this phase we write a program for lexical analyzer that generates tokens of the input program. We define rules for the C language in it. We write program using flex and this program takes input in C language.
